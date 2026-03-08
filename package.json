@@ -11,13 +11,20 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
+<<<<<<< HEAD
     "framer-motion": "^12.34.2",
     "gsap": "^3.14.2",
+=======
+    "framer-motion": "^12.27.0",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     "jspdf": "^4.0.0",
     "jspdf-autotable": "^5.0.7",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
+<<<<<<< HEAD
     "next-sitemap": "^4.2.3",
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     "nodemailer": "^7.0.13",
     "qrcode.react": "^4.2.0",
     "react": "19.2.3",

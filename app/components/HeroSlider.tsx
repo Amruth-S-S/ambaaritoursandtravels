@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   // "/Images/logo.jpeg",
+<<<<<<< HEAD
   // "/Images/logo.jpeg",
    "/Images/img17.jpg",
    "/Images/img15.jpg",
@@ -14,6 +15,13 @@ const slides = [
   // "/Images/img3.jpg",
  
    
+=======
+  "/Images/thailand.jpeg",
+  "/Images/img3.jpg",
+  "/Images/img4.jpg",
+  "/Images/img6.jpg",
+  "/Images/img7.jpg",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
 ];
 
 export default function HeroSlider() {
@@ -50,9 +58,15 @@ export default function HeroSlider() {
           <p className="text-gray-200 text-xl md:text-2xl mb-10 drop-shadow-lg">
             Unforgettable journeys await you
           </p>
+<<<<<<< HEAD
           {/* <button className="bg-gradient-to-r from-yellow-300 to-yellow-600 text-black px-10 py-4 rounded-full text-lg font-bold hover:from-amber-400 hover:to-yellow-500 transition-all duration-300 shadow-2xl shadow-amber-500/50 hover:scale-105">
             Start Your Journey
           </button> */}
+=======
+          <button className="bg-gradient-to-r from-yellow-300 to-yellow-600 text-black px-10 py-4 rounded-full text-lg font-bold hover:from-amber-400 hover:to-yellow-500 transition-all duration-300 shadow-2xl shadow-amber-500/50 hover:scale-105">
+            Start Your Journey
+          </button>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         </div>
       </div>
 

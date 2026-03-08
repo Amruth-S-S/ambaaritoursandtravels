@@ -6,18 +6,31 @@ import Link from "next/link";
 
 const destinations = [
   {
+<<<<<<< HEAD
     id: "13",
     name: "Thailand",
    image: "/Images/Thailand_pattaya.png",
+=======
+    id: "6",
+    name: "Thailand",
+    image: "/Images/Thailand 4N5D (4).png",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     description: "Sun, sand, and serenity",
     // rating: 4.8,
     // tours: 24,
   },
   {
+<<<<<<< HEAD
     id: "8",
     name: "Spiti Valley",
     image: "/Images/Spiti_Valley_.png",
     description: "Adventure in the Himalayas",
+=======
+    id: "1",
+    name: "European Escapade",
+    image: "/Images/europe.png",
+    description: "Royal palaces and forts",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     // rating: 4.7,
     // tours: 32,
   },
@@ -25,16 +38,26 @@ const destinations = [
     id: "3",
     name: "Uttar Pradesh",
     image: "/Images/varanasi.png",
+<<<<<<< HEAD
     description: "Spirituality and culture in Varanasi",
+=======
+    description: "Tranquil houseboat experiences",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     // rating: 4.9,
     // tours: 18,
   },
 
   {
     id: "7",
+<<<<<<< HEAD
     name: "MURDESHWARA SCUBA PACKAGE",
     image: "/Images/MURDESHWRA_SCUBA.png",
     description: "Island paradise with vibrant marine life",
+=======
+    name: "South Karnataka",
+    image: "/Images/SOUTH KARNATAKA TEMPLE TOUR.png",
+    description: "Mountain peaks and valleys",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     // rating: 4.9,
     // tours: 21,
   },

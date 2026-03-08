@@ -210,8 +210,13 @@ export default function ContactPage() {
                                             title: "Phone Numbers",
                                             items: [
 
+<<<<<<< HEAD
                                                 "+91-8073 097 430",
                                                 "24/7 Emergency: +91-70195 23858"
+=======
+                                                "+91-8310780523",
+                                                "24/7 Emergency: +91-6363223237"
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                             ]
                                         },
                                         {
@@ -285,7 +290,11 @@ export default function ContactPage() {
                                     <div>
                                         <h4 className="font-bold text-red-400">Emergency Travel Assistance</h4>
                                         <p className="text-sm text-gray-300">Available 24/7 for all travelers</p>
+<<<<<<< HEAD
                                         <p className="text-lg font-semibold text-white mt-1">+91-8073 097 430</p>
+=======
+                                        <p className="text-lg font-semibold text-white mt-1">+91-6363223237</p>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                     </div>
                                 </div>
                             </motion.div>

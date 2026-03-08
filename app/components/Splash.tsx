@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import Image from "next/image";
@@ -129,6 +130,21 @@ export default function Splash() {
           Scroll up to take off 
         </p>
       </div>
+=======
+import Image from "next/image";
+
+export default function Splash() {
+  return (
+    <section className="h-screen w-full flex items-center justify-center bg-black">
+      <Image
+        src="/Images/logo.jpeg"
+        alt="Ambaari Tours and Travels"
+        width={900}
+        height={400}
+        priority
+        className="animate-pulse"
+      />
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     </section>
   );
 }

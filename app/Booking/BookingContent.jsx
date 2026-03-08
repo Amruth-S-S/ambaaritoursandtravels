@@ -20,7 +20,11 @@ import {
     ChevronRight,
     Package,
     Clock,
+<<<<<<< HEAD
     ArrowLeft
+=======
+    IndianRupee
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "../components/Navbar";
@@ -28,7 +32,11 @@ import BackToTop from "../components/BackToTop";
 
 const packages = [
     {
+<<<<<<< HEAD
         id: "1",
+=======
+        id: "europe-001",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "Europe Dream Tour",
         price: 370999,
         duration: "10 Days 9 Nights",
@@ -36,7 +44,11 @@ const packages = [
         image: "/Images/europe.png"
     },
     {
+<<<<<<< HEAD
         id: "3",
+=======
+        id: "varanasi-003",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "Varanasi & Ayodhya Pilgrimage",
         price: 38899,
         duration: "4 Days 3 Nights",
@@ -44,7 +56,11 @@ const packages = [
         image: "/Images/varanasi.png"
     },
     {
+<<<<<<< HEAD
         id: "4",
+=======
+        id: "turkey-004",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "Turkey Adventure",
         price: 213175,
         duration: "7 Days 6 Nights",
@@ -52,7 +68,11 @@ const packages = [
         image: "/Images/turkey.png"
     },
     {
+<<<<<<< HEAD
         id: "5",
+=======
+        id: "mantralaya-005",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "Mantralaya Day Trip",
         price: 2799,
         duration: "1 Day",
@@ -60,7 +80,11 @@ const packages = [
         image: "/Images/Mantralaya 1D Package From Bamgalore.png"
     },
     {
+<<<<<<< HEAD
         id: "6",
+=======
+        id: "thailand-006",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "Thailand Paradise",
         price: 45999,
         duration: "6 Days 5 Nights",
@@ -68,12 +92,17 @@ const packages = [
         image: "/Images/Thailand 4N5D (4).png"
     },
     {
+<<<<<<< HEAD
         id: "7",
+=======
+        id: "karnataka-007",
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         name: "South Karnataka Temple Tour",
         price: 2999,
         duration: "5 Days 4 Nights",
         category: "Cultural",
         image: "/Images/SOUTH KARNATAKA TEMPLE TOUR.png"
+<<<<<<< HEAD
     },
     {
         id: "8",
@@ -179,6 +208,9 @@ const packages = [
         // category: "Adventure",
       image: "/Images/Singadur_.png",
     },
+=======
+    }
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
 ];
 
 const paymentMethods = [
@@ -224,7 +256,10 @@ export default function BookingContent() {
     const [showInvoicePopup, setShowInvoicePopup] = useState(false);
     const [invoiceMessage, setInvoiceMessage] = useState("");
     const [invoiceStatus, setInvoiceStatus] = useState("success");
+<<<<<<< HEAD
     const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
 
     // Form state
     const [formData, setFormData] = useState({
@@ -236,12 +271,16 @@ export default function BookingContent() {
         specialRequests: ""
     });
 
+<<<<<<< HEAD
     // Find and set the selected package when packageId changes
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     useEffect(() => {
         if (packageId) {
             const pkg = packages.find(p => p.id === packageId);
             if (pkg) {
                 setSelectedPackage(pkg);
+<<<<<<< HEAD
                 // If package is found, we can move to step 2 automatically
                 setStep(2);
             }
@@ -249,6 +288,10 @@ export default function BookingContent() {
         } else {
             // If no package ID, redirect to packages page
             window.location.href = '/Packages';
+=======
+                setStep(2);
+            }
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
         }
     }, [packageId]);
 
@@ -392,6 +435,7 @@ export default function BookingContent() {
         }).format(numericAmount);
     };
 
+<<<<<<< HEAD
     // Show loading state
     if (isLoading) {
         return (
@@ -408,6 +452,8 @@ export default function BookingContent() {
         );
     }
 
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     return (
         <>
             <Navbar />
@@ -498,6 +544,7 @@ export default function BookingContent() {
                                 ) : (
                                     // Form Steps
                                     <form onSubmit={handleSubmit}>
+<<<<<<< HEAD
                                         {/* Step 1: Package Selection - Shows ONLY the selected package */}
                                         {step === 1 && selectedPackage && (
                                             <div className="animate-fade-in">
@@ -570,6 +617,54 @@ export default function BookingContent() {
                                                             </button>
                                                         </div>
                                                     </div>
+=======
+                                        {/* Step 1: Package Selection */}
+                                        {step === 1 && (
+                                            <div className="animate-fade-in">
+                                                <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                                                    <Package className="w-6 h-6 text-amber-400" />
+                                                    Select Your Package
+                                                </h2>
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                    {packages.map((pkg) => (
+                                                        <div
+                                                            key={pkg.id}
+                                                            onClick={() => setSelectedPackage(pkg)}
+                                                            className={`p-4 rounded-2xl border-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] ${selectedPackage?.id === pkg.id
+                                                                    ? "border-amber-500 bg-amber-500/10"
+                                                                    : "border-gray-700 hover:border-amber-500/50"
+                                                                }`}
+                                                        >
+                                                            <div className="flex items-start gap-4">
+                                                                <div className="relative w-24 h-24 rounded-xl overflow-hidden flex-shrink-0">
+                                                                    <Image
+                                                                        src={pkg.image}
+                                                                        alt={pkg.name}
+                                                                        fill
+                                                                        className="object-cover"
+                                                                    />
+                                                                </div>
+                                                                <div className="flex-1">
+                                                                    <h3 className="font-bold text-white mb-1">{pkg.name}</h3>
+                                                                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-2">
+                                                                        <span className="flex items-center gap-1">
+                                                                            <Clock className="w-4 h-4" />
+                                                                            {pkg.duration}
+                                                                        </span>
+                                                                        <span className="px-2 py-1 bg-gray-800 rounded-full text-xs">
+                                                                            {pkg.category}
+                                                                        </span>
+                                                                    </div>
+                                                                    <div className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                                                                        {formatCurrency(pkg.price)}
+                                                                    </div>
+                                                                </div>
+                                                                <ChevronRight className={`w-5 h-5 ${selectedPackage?.id === pkg.id ? "text-amber-400" : "text-gray-600"
+                                                                    }`} />
+                                                            </div>
+                                                        </div>
+                                                    ))}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                                 </div>
                                             </div>
                                         )}
@@ -577,6 +672,7 @@ export default function BookingContent() {
                                         {/* Step 2: Traveler Details */}
                                         {step === 2 && (
                                             <div className="animate-fade-in">
+<<<<<<< HEAD
                                                 {/* Package Summary Card (Small) */}
                                                 <div className="bg-gradient-to-br from-amber-500/10 to-orange-600/10 border border-amber-500/20 rounded-xl p-4 mb-6">
                                                     <div className="flex items-center gap-4">
@@ -611,6 +707,8 @@ export default function BookingContent() {
                                                     </div>
                                                 </div>
 
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                                 <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                                                     <User className="w-6 h-6 text-amber-400" />
                                                     Traveler Details
@@ -733,8 +831,13 @@ export default function BookingContent() {
                                                                 if (method.id === "upi") setShowQR(true);
                                                             }}
                                                             className={`p-4 rounded-2xl border-2 cursor-pointer transition-all ${selectedPayment === method.id
+<<<<<<< HEAD
                                                                 ? "border-amber-500 bg-amber-500/10"
                                                                 : "border-gray-700 hover:border-amber-500/50"
+=======
+                                                                    ? "border-amber-500 bg-amber-500/10"
+                                                                    : "border-gray-700 hover:border-amber-500/50"
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                                                 }`}
                                                         >
                                                             <div className="text-3xl mb-2">{method.icon}</div>
@@ -1046,7 +1149,11 @@ export default function BookingContent() {
                                                             Confirm Booking & Send Receipt
                                                         </button>
                                                         <p className="text-gray-400 text-sm mt-3">
+<<<<<<< HEAD
                                                             Receipt will be sent to {formData.email} and ambaaritoursandtravels19@gmail.com
+=======
+                                                            Receipt will be sent to {formData.email} and amruthss45@gmail.com
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1054,7 +1161,11 @@ export default function BookingContent() {
                                         )}
 
                                         {/* Navigation Buttons */}
+<<<<<<< HEAD
                                         {!bookingComplete && step !== 1 && (
+=======
+                                        {!bookingComplete && (
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                             <div className="flex justify-between mt-8 pt-6 border-t border-gray-800">
                                                 {step > 1 && (
                                                     <button
@@ -1066,6 +1177,7 @@ export default function BookingContent() {
                                                     </button>
                                                 )}
                                                 <button
+<<<<<<< HEAD
                                                     type="button"
                                                     onClick={handleContinue}
                                                     disabled={
@@ -1074,6 +1186,14 @@ export default function BookingContent() {
                                                     }
                                                     className={`px-8 py-3 rounded-full font-bold transition-all ml-auto ${(step === 2 && (!formData.name || !formData.email || !formData.phone || !formData.travelDate)) ||
                                                             (step === 4 && (!paymentReference || paymentReference.length < 4))
+=======
+                                                    type="submit"
+                                                    disabled={
+                                                        (step === 1 && !selectedPackage) ||
+                                                        (step === 4 && (!paymentReference || paymentReference.length < 4))
+                                                    }
+                                                    className={`px-8 py-3 rounded-full font-bold transition-all ml-auto ${step === 1 && !selectedPackage
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                                             ? "bg-gray-700 text-gray-400 cursor-not-allowed"
                                                             : "bg-gradient-to-r from-amber-500 to-orange-600 text-black hover:from-amber-400 hover:to-orange-500 hover:scale-105"
                                                         }`}
@@ -1138,7 +1258,11 @@ export default function BookingContent() {
                                     ) : (
                                         <div className="text-center py-8 text-gray-400">
                                             <Package className="w-12 h-12 mx-auto mb-4 text-gray-600" />
+<<<<<<< HEAD
                                             <p>Loading package details...</p>
+=======
+                                            <p>Select a package to see details</p>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                         </div>
                                     )}
 
@@ -1148,11 +1272,19 @@ export default function BookingContent() {
                                         <div className="space-y-2">
                                             <div className="flex items-center gap-2 text-gray-300">
                                                 <Phone className="w-4 h-4 text-amber-400" />
+<<<<<<< HEAD
                                                 <span>+91 8073 097 430</span>
                                             </div>
                                             <div className="flex items-center gap-2 text-gray-300">
                                                 <Mail className="w-4 h-4 text-amber-400" />
                                                 <span>ambaaritoursandtravels19@gmail.com</span>
+=======
+                                                <span>+91 98765 43210</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-gray-300">
+                                                <Mail className="w-4 h-4 text-amber-400" />
+                                                <span>support@ambaari.com</span>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                                             </div>
                                         </div>
                                     </div>

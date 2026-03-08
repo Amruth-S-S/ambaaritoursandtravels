@@ -9,6 +9,7 @@ import BackToTop from "../components/BackToTop";
 import { useSearchParams } from "next/navigation";
 
 const packages = [
+<<<<<<< HEAD
   
   {
     id: 8,
@@ -399,6 +400,8 @@ const packages = [
     category: "nature",
     tags: ["jog-falls", "waterfall", "day-trip", "nature"]
   },
+=======
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
   {
     id: 1,
     title: "Europe Dream Tour",
@@ -582,12 +585,20 @@ const packages = [
 export default function PackagesContent() {
   const [activePackage, setActivePackage] = useState(packages[0]);
   const searchParams = useSearchParams();
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
   // Hierarchical filter states
   const [selectedRegion, setSelectedRegion] = useState("all"); // "all", "domestic", "international"
   const [selectedZone, setSelectedZone] = useState("all"); // "all", "north", "south" (only for domestic)
   const [selectedSubType, setSelectedSubType] = useState("all"); // "all", "pilgrimage", "trekking", "adventure", "budget", "cultural"
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
   const packageId = searchParams.get("package");
 
   // Advanced filtering logic
@@ -656,12 +667,21 @@ export default function PackagesContent() {
   // Get filter summary text
   const getFilterSummary = () => {
     if (selectedRegion === "all") return "All Packages";
+<<<<<<< HEAD
 
     let summary = selectedRegion === "domestic" ? "Domestic" : "International";
 
     if (selectedRegion === "domestic" && selectedZone !== "all") {
       summary += ` > ${selectedZone === "north" ? "North India" : "South India"}`;
 
+=======
+    
+    let summary = selectedRegion === "domestic" ? "Domestic" : "International";
+    
+    if (selectedRegion === "domestic" && selectedZone !== "all") {
+      summary += ` > ${selectedZone === "north" ? "North India" : "South India"}`;
+      
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
       if (selectedSubType !== "all") {
         const subTypeLabels = {
           pilgrimage: "Pilgrimage",
@@ -673,7 +693,11 @@ export default function PackagesContent() {
         summary += ` > ${subTypeLabels[selectedSubType]}`;
       }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
     return summary;
   };
 
@@ -710,28 +734,52 @@ export default function PackagesContent() {
                 <div className="flex flex-wrap gap-4 justify-center">
                   <button
                     onClick={() => setSelectedRegion("all")}
+<<<<<<< HEAD
                     className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedRegion === "all"
                       ? "bg-gradient-to-r from-amber-500 to-orange-500 text-black font-bold shadow-lg shadow-amber-500/50"
                       : "bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-300 hover:from-amber-500/30 hover:to-orange-500/30"
                       }`}
+=======
+                    className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                      selectedRegion === "all"
+                        ? "bg-gradient-to-r from-amber-500 to-orange-500 text-black font-bold shadow-lg shadow-amber-500/50"
+                        : "bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 text-amber-300 hover:from-amber-500/30 hover:to-orange-500/30"
+                    }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                   >
                     All Packages
                   </button>
                   <button
                     onClick={() => setSelectedRegion("domestic")}
+<<<<<<< HEAD
                     className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedRegion === "domestic"
                       ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold shadow-lg shadow-green-500/50"
                       : "bg-gradient-to-r from-green-500/20 to-emerald-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-emerald-600/30"
                       }`}
+=======
+                    className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                      selectedRegion === "domestic"
+                        ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold shadow-lg shadow-green-500/50"
+                        : "bg-gradient-to-r from-green-500/20 to-emerald-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-emerald-600/30"
+                    }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                   >
                     🇮🇳 Domestic Packages
                   </button>
                   <button
                     onClick={() => setSelectedRegion("international")}
+<<<<<<< HEAD
                     className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedRegion === "international"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold shadow-lg shadow-blue-500/50"
                       : "bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 text-blue-300 hover:from-blue-500/30 hover:to-purple-600/30"
                       }`}
+=======
+                    className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                      selectedRegion === "international"
+                        ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold shadow-lg shadow-blue-500/50"
+                        : "bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 text-blue-300 hover:from-blue-500/30 hover:to-purple-600/30"
+                    }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                   >
                     ✈️ International Packages
                   </button>
@@ -748,28 +796,52 @@ export default function PackagesContent() {
                   <div className="flex flex-wrap gap-4 justify-center">
                     <button
                       onClick={() => setSelectedZone("all")}
+<<<<<<< HEAD
                       className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedZone === "all"
                         ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-green-500/20 to-emerald-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-emerald-600/30"
                         }`}
+=======
+                      className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                        selectedZone === "all"
+                          ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-green-500/20 to-emerald-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-emerald-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       All Zones
                     </button>
                     <button
                       onClick={() => setSelectedZone("north")}
+<<<<<<< HEAD
                       className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedZone === "north"
                         ? "bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-orange-500/20 to-red-600/20 border border-orange-500/30 text-orange-300 hover:from-orange-500/30 hover:to-red-600/30"
                         }`}
+=======
+                      className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                        selectedZone === "north"
+                          ? "bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-orange-500/20 to-red-600/20 border border-orange-500/30 text-orange-300 hover:from-orange-500/30 hover:to-red-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       🕉️ North India
                     </button>
                     <button
                       onClick={() => setSelectedZone("south")}
+<<<<<<< HEAD
                       className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${selectedZone === "south"
                         ? "bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-teal-500/20 to-cyan-600/20 border border-teal-500/30 text-teal-300 hover:from-teal-500/30 hover:to-cyan-600/30"
                         }`}
+=======
+                      className={`px-8 py-3 rounded-full transition-all cursor-pointer hover:scale-105 ${
+                        selectedZone === "south"
+                          ? "bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-teal-500/20 to-cyan-600/20 border border-teal-500/30 text-teal-300 hover:from-teal-500/30 hover:to-cyan-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       🌴 South India
                     </button>
@@ -787,55 +859,103 @@ export default function PackagesContent() {
                   <div className="flex flex-wrap gap-4 justify-center">
                     <button
                       onClick={() => setSelectedSubType("all")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "all"
                         ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-cyan-300 hover:from-cyan-500/30 hover:to-blue-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "all"
+                          ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 text-cyan-300 hover:from-cyan-500/30 hover:to-blue-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       All Types
                     </button>
                     <button
                       onClick={() => setSelectedSubType("pilgrimage")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "pilgrimage"
                         ? "bg-gradient-to-r from-yellow-500 to-orange-600 text-black font-bold shadow-lg"
                         : "bg-gradient-to-r from-yellow-500/20 to-orange-600/20 border border-yellow-500/30 text-yellow-300 hover:from-yellow-500/30 hover:to-orange-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "pilgrimage"
+                          ? "bg-gradient-to-r from-yellow-500 to-orange-600 text-black font-bold shadow-lg"
+                          : "bg-gradient-to-r from-yellow-500/20 to-orange-600/20 border border-yellow-500/30 text-yellow-300 hover:from-yellow-500/30 hover:to-orange-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       🙏 Pilgrimage
                     </button>
                     <button
                       onClick={() => setSelectedSubType("trekking")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "trekking"
                         ? "bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-green-500/20 to-teal-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-teal-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "trekking"
+                          ? "bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-green-500/20 to-teal-600/20 border border-green-500/30 text-green-300 hover:from-green-500/30 hover:to-teal-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       ⛰️ Trekking
                     </button>
                     <button
                       onClick={() => setSelectedSubType("adventure")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "adventure"
                         ? "bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-red-500/20 to-pink-600/20 border border-red-500/30 text-red-300 hover:from-red-500/30 hover:to-pink-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "adventure"
+                          ? "bg-gradient-to-r from-red-500 to-pink-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-red-500/20 to-pink-600/20 border border-red-500/30 text-red-300 hover:from-red-500/30 hover:to-pink-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       🎢 Adventure
                     </button>
                     <button
                       onClick={() => setSelectedSubType("budget")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "budget"
                         ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-emerald-500/20 to-green-600/20 border border-emerald-500/30 text-emerald-300 hover:from-emerald-500/30 hover:to-green-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "budget"
+                          ? "bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-emerald-500/20 to-green-600/20 border border-emerald-500/30 text-emerald-300 hover:from-emerald-500/30 hover:to-green-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       💰 Budget Friendly
                     </button>
                     <button
                       onClick={() => setSelectedSubType("cultural")}
+<<<<<<< HEAD
                       className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${selectedSubType === "cultural"
                         ? "bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold shadow-lg"
                         : "bg-gradient-to-r from-purple-500/20 to-indigo-600/20 border border-purple-500/30 text-purple-300 hover:from-purple-500/30 hover:to-indigo-600/30"
                         }`}
+=======
+                      className={`px-6 py-2 rounded-full transition-all cursor-pointer hover:scale-105 text-sm ${
+                        selectedSubType === "cultural"
+                          ? "bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold shadow-lg"
+                          : "bg-gradient-to-r from-purple-500/20 to-indigo-600/20 border border-purple-500/30 text-purple-300 hover:from-purple-500/30 hover:to-indigo-600/30"
+                      }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     >
                       🎭 Cultural
                     </button>
@@ -864,8 +984,14 @@ export default function PackagesContent() {
                   <div
                     key={pkg.id}
                     id={`package-${pkg.id}`}
+<<<<<<< HEAD
                     className={`bg-gradient-to-br ${pkg.color}/10 to-gray-900/50 backdrop-blur-sm border border-amber-500/20 rounded-3xl overflow-hidden shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 hover:scale-[1.02] animate-fade-in-up cursor-pointer ${activePackage.id === pkg.id ? "ring-2 ring-amber-500" : ""
                       }`}
+=======
+                    className={`bg-gradient-to-br ${pkg.color}/10 to-gray-900/50 backdrop-blur-sm border border-amber-500/20 rounded-3xl overflow-hidden shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 hover:scale-[1.02] animate-fade-in-up cursor-pointer ${
+                      activePackage.id === pkg.id ? "ring-2 ring-amber-500" : ""
+                    }`}
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                     style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={() => setActivePackage(pkg)}
                   >
@@ -927,6 +1053,7 @@ export default function PackagesContent() {
                           >
                             Book Now
                           </Link>
+<<<<<<< HEAD
                           <a
                             href={`/pdfs/package-${pkg.id}.pdf`}
                             target="_blank"
@@ -938,6 +1065,14 @@ export default function PackagesContent() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
                           </a>
+=======
+                          <Link
+                            href={`/Packages/${pkg.id}`}
+                            className="text-amber-400 hover:text-amber-300 transition-colors font-medium"
+                          >
+                            View Details →
+                          </Link>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                         </div>
                       </div>
                     </div>
@@ -1025,9 +1160,15 @@ export default function PackagesContent() {
                   >
                     Book Package
                   </Link>
+<<<<<<< HEAD
                   {/* <button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-black py-4 rounded-xl font-bold text-lg hover:from-amber-400 hover:to-orange-500 transition-all hover:scale-105 shadow-lg shadow-amber-500/30">
                     Download Brochure
                   </button> */}
+=======
+                  <button className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-black py-4 rounded-xl font-bold text-lg hover:from-amber-400 hover:to-orange-500 transition-all hover:scale-105 shadow-lg shadow-amber-500/30">
+                    Download Brochure
+                  </button>
+>>>>>>> e6f0efaa306a7d430cdede445e1abb0706b7e769
                   <div className="text-center text-gray-400 text-sm">
                     <span className="text-amber-400">✦</span> Free cancellation up to 30 days
                     <span className="text-amber-400 mx-2">✦</span>
